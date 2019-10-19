@@ -1,0 +1,46 @@
+﻿div.message-container
+{
+    background-position: left top;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 84px;
+    background-repeat: no-repeat;
+}
+div.message-container *
+{
+    display: block;
+}
+div.message-container div.logo, div.message-container h2
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+div.message-container div.icon.information
+{
+    background-image: url(/Images/Search-Engine/message-information-icon.png);    
+}
+div.message-container div.icon.question
+{
+    background-image: url(/Images/Search-Engine/message-question-icon.png);    
+}
+div.message-container div.icon.warning
+{
+    background-image: url(/Images/Search-Engine/message-warning-icon.png);    
+}
+div.message-container div.icon.error
+{
+    background-image: url(/Images/Search-Engine/message-error-icon.png);    
+}
+div.message-container p
+{
+   
+}
+div.message-container ul
+{
+    
+}
+div.message-container ul li
+{
+    
+}

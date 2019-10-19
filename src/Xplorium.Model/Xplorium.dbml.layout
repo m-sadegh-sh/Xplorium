@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 8.5" name="Xplorium">
+  <DataContextMoniker Name="/XploriumDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6a75727d-58bc-4ece-8842-f5b63994ef90" absoluteBounds="3.5, 1.125, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/XploriumDataContext/Cache" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f690a018-de6a-49ee-b6c9-d60075b44f44" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b58c42b9-60a3-417f-8ab5-7f75916332a3" absoluteBounds="6.25, 5.375, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/XploriumDataContext/Word" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a39a55b6-e645-4667-84a0-4a7105ca3d29" absoluteBounds="6.265, 5.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="946c7854-5189-47ab-bb95-aadc0bf8eaf3" absoluteBounds="9, 1.375, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/XploriumDataContext/Hit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93852d30-2d7d-46e6-97d5-df0174ca2d0f" absoluteBounds="9.015, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47154e66-c13e-44a7-99b6-8c0460e5aa3b" absoluteBounds="0.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/XploriumDataContext/Track" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7ffee57-4470-476a-950c-8e928c24d03a" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="607dae7d-892c-4f09-9e86-386d5a1075bf" absoluteBounds="0.75, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/XploriumDataContext/Url" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d986647-ff9f-42af-85d7-140a82acfef0" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 5.97199625651042); (10 : 5.97199625651042); (10 : 2.7612939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XploriumDataContext/Word/Word_Hit" />
+      <nodes>
+        <classShapeMoniker Id="b58c42b9-60a3-417f-8ab5-7f75916332a3" />
+        <classShapeMoniker Id="946c7854-5189-47ab-bb95-aadc0bf8eaf3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.01044840494792); (3.5 : 2.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XploriumDataContext/Url/Url_Cache" />
+      <nodes>
+        <classShapeMoniker Id="607dae7d-892c-4f09-9e86-386d5a1075bf" />
+        <classShapeMoniker Id="6a75727d-58bc-4ece-8842-f5b63994ef90" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8ef3ae7f-1d9e-489f-b439-49a366947c08" absoluteBounds="6.625, 1.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/XploriumDataContext/ParsedContent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2cadb873-c93b-4971-85a7-3b13d98c7f10" absoluteBounds="6.64, 1.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.625 : 2.06814697265625); (9 : 2.06814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XploriumDataContext/ParsedContent/ParsedContent_Hit" />
+      <nodes>
+        <classShapeMoniker Id="8ef3ae7f-1d9e-489f-b439-49a366947c08" />
+        <classShapeMoniker Id="946c7854-5189-47ab-bb95-aadc0bf8eaf3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.01044840494792); (6.625 : 2.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XploriumDataContext/Cache/Cache_ParsedContent" />
+      <nodes>
+        <classShapeMoniker Id="6a75727d-58bc-4ece-8842-f5b63994ef90" />
+        <classShapeMoniker Id="8ef3ae7f-1d9e-489f-b439-49a366947c08" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

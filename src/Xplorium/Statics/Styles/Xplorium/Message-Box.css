@@ -1,0 +1,18 @@
+﻿div.message-box-container
+{
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    padding: 20px;
+}
+div.error
+{
+    border-color: #FF3300;
+    background-color: #FFECEC;
+}
+div.error h2
+{
+    font-size: 16px;
+    color: #FF3300;
+    margin-bottom: 5px;
+}

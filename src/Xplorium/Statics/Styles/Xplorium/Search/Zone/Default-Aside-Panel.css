@@ -1,0 +1,23 @@
+﻿div.zone-container
+{
+    display: block;
+}
+div.zone-container a
+{
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+    clear: both;
+}
+div.zone-container a:hover
+{
+    background-color: #F0F0F0;
+}
+div.zone-container a:focus
+{
+    background-color: #E9E9E9;
+}
+div.zone-container a.active
+{
+    font-weight: bold;
+}

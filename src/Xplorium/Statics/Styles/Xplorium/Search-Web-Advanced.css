@@ -1,0 +1,81 @@
+﻿/*
+    Area: Search-Engine
+    Controller: Search
+    Action: Advanced
+    SearchZone: Web
+    SearchType: Advanced
+    Url: http://www.xplorium.net/statics/styles/xplorium/search-engine/search/advanced/default.css
+*/
+div.web-container
+{
+    background-position: center top;
+    display: inherit;
+    margin-top: 25px;
+    margin-right: inherit;
+    margin-bottom: 50px;
+    margin-left: inherit;
+    background-image: url(/statics/images/xplorium/search/web/advanced.png);
+    padding-top: 132px;
+    background-repeat: no-repeat;
+    width: 700px;
+}
+div.web-container div.form-fields
+{
+    display: block;
+}
+div.web-container div.form-fields div.form-field
+{
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+div.web-container div.form-fields div.form-field:last-child
+{
+    margin-bottom: 0px;
+}
+div.web-container div.form-fields div.form-field *
+{
+    display: block;
+}
+div.web-container div.form-fields div.form-field input[type="text"], div.web-container div.form-fields div.form-field div.input-like
+{
+    border-style: outset solid solid outset;
+    border-width: 1px;
+    border-color: #ACACAC;
+    padding: 4px 32px 4px 4px;
+    font-size: 14px;
+    height: 24px;
+    font-weight: bold;
+    color: #444;
+    background-color: #FCFCFC;
+    width: 650px;
+}
+.highlight
+{
+    border-color: #FF9479;
+}
+.highlight:hover, .highlight:focus
+{
+    border-color: #FF9479;
+}
+div.web-container div.form-fields div.form-field div.input-like
+{
+    border-color: transparent;
+    background-color: transparent;
+}
+div.web-container div.form-fields div.form-field input[type="text"]:focus
+{
+    background-color: #ffffff;
+}
+div.web-container div.form-fields div.form-field input[type="submit"]
+{
+    border-style: none;
+    text-indent: -9999px;
+    width: 24px;
+    height: 24px;
+    background-image: url(/statics/images/xplorium/search/button.png);
+}
+div.web-container div.form-fields div.form-field input[type="submit"]:hover
+{
+    cursor: pointer;
+}

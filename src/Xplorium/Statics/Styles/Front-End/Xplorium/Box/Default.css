@@ -1,0 +1,181 @@
+﻿#box-container
+{
+    margin: 0px auto 0px auto;
+    display: block;
+    width: 575px;
+}
+#box-container .header
+{
+    padding: 18px 15px 0px 15px;
+    background-position: center top;
+    background-image: url(/statics/images/front-end/xplorium/box/header.png);
+    background-repeat: no-repeat;
+}
+#box-container .header h2
+{
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: block;
+    height: 82px;
+    text-indent: -9999px;
+}
+#box-container .header h3
+{
+    color: #777777;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 100%;
+    text-align: center;
+}
+#box-container form
+{
+    display: block;
+}
+#box-container form .content
+{
+    background-image: url(/statics/images/front-end/xplorium/box/content.png);
+    background-repeat: repeat-y;
+    background-color: transparent;
+    background-position: left top;
+    display: block;
+    padding: 15px;
+}
+#box-container form .content ul.selector-container
+{
+    margin: 0 45px 5px 45px;
+    text-align: center;
+}
+#box-container form .content ul.selector-container li
+{
+    display: inline-block;
+    margin-right: 5px;
+    background-color: #e2f0f9;
+    -moz-border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+}
+#box-container form .content ul.selector-container li.current
+{
+    background-color: #C4DFF2;
+}
+#box-container form .content ul.selector-container li:last-child
+{
+    margin-right: 0px;
+}
+#box-container form .content ul.selector-container li a
+{
+    display: block;
+    color: #9fbbcd;
+}
+#box-container form .content ul.selector-container li a:hover
+{
+    color: #517D9B;
+}
+#box-container form .content ul.selector-container li a.current, #box-container form ul.selector-container li a:focus
+{
+    color: #7AA0BA;
+}
+#box-container form .content .box
+{
+    background-color: #e2f0f9;
+    padding: 15px;
+    text-align: left;
+    -moz-border-radius: 5px;
+}
+#box-container form .content .box p, #box-container form .content .box h3, #box-container form .content .box ul
+{
+    font-size: 12px;
+    line-height: 150%;
+    margin: 10px 0;
+    display: block;
+}
+#box-container form .content .box h3
+{
+    font-weight: bold;
+    font-size: 14px;
+}
+#box-container form .content .box ul
+{
+    margin: 10px;
+}
+#box-container form .content .box p:first-child, #box-container form .content .box h3:first-child, #box-container form .content .box ul:first-child
+{
+    margin: 0px 0 10px 0;
+}
+#box-container form .content .box p:last-child, #box-container form .content .box h3:last-child, #box-container form .content .box ul:last-child
+{
+    margin: 10px 0 0px 0;
+}
+#box-container form .content .box ul li
+{
+    background-position: left 8px;
+    background-image: url(/statics/images/front-end/xplorium/public/arrow.gif);
+    background-color: transparent;
+    padding: 2px 0px 2px 8px;
+    background-repeat: no-repeat;
+}
+#box-container form .content .box div
+{
+    margin: 0 0 15px;
+    display: block;
+}
+#box-container form .content .box div:last-child
+{
+    margin: 0;
+}
+#box-container form .content .box div label
+{
+    padding: 15px 0 0 0;
+    text-align: right;
+    width: 140px;
+    display: inline-block;
+    float: left;
+}
+#box-container form .content .box div span
+{
+    -moz-border-radius: 5px;
+    display: inline-block;
+    padding: 5px;
+    background-color: #d0e5f2;
+    float: right;
+}
+
+#box-container form .content .box div span input[type="text"]
+{
+    letter-spacing: -1px;
+    vertical-align: bottom;
+    width: 343px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#box-container form .content .box div span.single input[type="text"]
+{
+    width: 493px;
+}
+#box-container form .footer
+{
+    padding: 0px 15px 18px 15px;
+    background-position: 0px bottom;
+    background-image: url(/statics/images/front-end/xplorium/box/footer.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: block;
+    max-height: 75px;
+    text-align: right;
+    overflow: hidden;
+}
+#box-container form .footer span
+{
+    float: left;
+    font-size: 11px;
+    padding-top: 7px;
+}
+#box-container form .footer span a
+{
+    background-position: left 6px;
+    background-image: url(/statics/images/front-end/xplorium/public/arrow.gif);
+    background-color: transparent;
+    border: 0 none;
+    color: #999999;
+    padding: 2px 0 2px 8px;
+    background-repeat: no-repeat;
+}

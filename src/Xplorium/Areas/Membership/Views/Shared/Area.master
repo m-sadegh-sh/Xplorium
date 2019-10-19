@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Xplorium.Master" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<asp:Content ContentPlaceHolderID="TitleContent" runat="server">
+    <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+</asp:Content>
+<asp:Content ContentPlaceHolderID="CssContent" runat="server">
+    <asp:ContentPlaceHolder ID="CssContent" runat="server" />
+</asp:Content>
+<asp:Content ContentPlaceHolderID="MainContent" runat="server">
+    <div class="area">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <asp:ContentPlaceHolder ID="ExploreContent" runat="server" />
+    </div>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="ScriptsContent" runat="server">
+    <asp:ContentPlaceHolder ID="ScriptsContent" runat="server" />
+</asp:Content>

@@ -1,0 +1,47 @@
+﻿/*
+    Area: Search-Engine
+    Controller: Search
+    Action: Basic
+    SearchZone: Web
+    SearchType: Basic
+    Url: http://www.xplorium.net/statics/styles/xplorium/search-engine/search/basic/default.css
+*/
+div.logo
+{
+    background-position: center top;
+    display: block;
+    background-image: url(/statics/images/xplorium/search/web/basic.png);
+    padding-top: 132px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+ input[type="text"]
+{    
+    width: 450px;
+    padding-right: 32px;
+}
+.highlight
+{
+    background-color: #FFF0F0;
+}
+input[type="text"]:focus
+{
+    background-color: #ffffff;
+}
+button[type="submit"]
+{
+    background-position: 0px 0px;
+    width: 64px;
+    height: 35px;
+    background-image: url(/statics/images/xplorium/search/button.png);
+    margin-left: 5px;
+}
+button[type="submit"]:hover
+{
+    background-position: 0px -35px;
+    cursor: pointer;
+}
+button[type="submit"]:focus
+{
+    background-position: 0px -70px;
+}

@@ -1,0 +1,282 @@
+﻿#wide-box-container
+{
+    margin: 0px auto 0px auto;
+    display: block;
+    width: 950px;
+}
+#wide-box-container .header
+{
+    padding: 18px 15px 0px 15px;
+    background-position: center top;
+    background-image: url(/statics/images/front-end/xplorium/wide-box/header.png);
+    background-repeat: no-repeat;
+}
+#wide-box-container .header h2
+{
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: block;
+    height: 82px;
+    text-indent: -9999px;
+}
+#wide-box-container .header h3
+{
+    color: #777777;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 100%;
+    text-align: center;
+}
+#wide-box-container form
+{
+    display: block;
+}
+#wide-box-container form .content
+{
+    background-image: url(/statics/images/front-end/xplorium/wide-box/content.png);
+    background-repeat: repeat-y;
+    background-color: transparent;
+    background-position: left top;
+    display: block;
+    padding: 15px;
+}
+#wide-box-container form .content .box
+{
+    background-color: #e2f0f9;
+    padding: 15px;
+    text-align: left;
+    -moz-border-radius: 5px;
+    margin-bottom: 15px;
+}
+#wide-box-container form .content .box:last-child
+{
+    margin-bottom: 0px;
+}
+#wide-box-container form .content .box p, #wide-box-container form .content .box h3, #wide-box-container form .content .box ul
+{
+    font-size: 12px;
+    line-height: 150%;
+    margin: 10px 0;
+    display: block;
+}
+#wide-box-container form .content .box h3
+{
+    font-weight: bold;
+    font-size: 14px;
+}
+#wide-box-container form .content .box ul.context
+{
+    margin: 10px;
+}
+#wide-box-container form .content .box p:first-child, #wide-box-container form .content .box h3:first-child, #wide-box-container form .content .box ul:first-child
+{
+    margin: 0px 0 10px 0;
+}
+#wide-box-container form .content .box p:last-child, #wide-box-container form .content .box h3:last-child, #wide-box-container form .content .box ul:last-child
+{
+    margin: 10px 0 0px 0;
+}
+#wide-box-container form .content .box ul.context li
+{
+    background-position: left 8px;
+    background-image: url(/statics/images/front-end/xplorium/public/arrow.gif);
+    background-color: transparent;
+    padding: 2px 0px 2px 8px;
+    background-repeat: no-repeat;
+}
+#wide-box-container form .content .box div
+{
+    margin: 0 0 15px;
+    display: block;
+}
+#wide-box-container form .content .box div.inline div.group
+{
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 0px;
+}
+#wide-box-container form .content .box div.inline div.group.last-child
+{
+    margin-right: 0px;
+}
+#wide-box-container form .content .box div:last-child,
+#wide-box-container form .content .box div.last-child
+{
+    margin: 0;
+}
+#wide-box-container form .content .box div label
+{
+    padding: 0 0 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+} 
+#wide-box-container form .content .box div span
+{
+    -moz-border-radius: 5px;
+    display: block;
+    padding: 5px;
+    background-color: #d0e5f2;
+}
+#wide-box-container form .content .box div span input[type="text"]
+{
+    letter-spacing: -1px;
+    vertical-align: bottom;
+    font-size: 18px;
+    font-weight: bold;
+    width: 778px;
+}
+#wide-box-container form .content .box div span.single input[type="text"]
+{    
+    margin-right: 5px;
+}
+#wide-box-container form .content .box div span input[type="submit"]
+{
+    width: 85px;
+    height: 34px;
+    text-indent: -9999px;
+    background-image: url(/Statics/Images/Front-End/Xplorium/Search/Web/Result/Search.gif);
+    background-color: transparent;
+}
+#wide-box-container form .content .box div span select,#wide-box-container form .content .box div span select option
+{
+    letter-spacing: -1px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#wide-box-container form .content .box div.half div span select
+{
+    width: 868px;
+}
+#wide-box-container form .content .box div.half div span input[type="text"]
+{
+    width: 414px;
+}
+#wide-box-container form .content .box div.half div span select
+{
+    width: 425px;
+}
+#wide-box-container form .content .box div.third div span input[type="text"]
+{
+    width: 274px;
+}
+#wide-box-container form .content .box div.third div span select
+{
+    width: 274px;
+}
+#wide-box-container .content-wrapper
+{
+    background-image: url(/statics/images/front-end/xplorium/wide-box/content.png);
+    background-repeat: repeat-y;
+    background-color: transparent;
+    background-position: left top;
+    display: block;
+    padding: 0px 10px 10px 10px;
+}
+#wide-box-container .content-wrapper .results-wrapper
+{
+    float: left;
+    padding: 0px;
+    width: 690px;
+    margin-right: 10px;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result
+{
+    padding: 0px 10px 10px 10px;
+    margin: 0px 0px 10px 0px;
+    display: block;
+    border-bottom: 1px solid #E4E4E4;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result:last-child
+{
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+    border-bottom-style: none;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result div
+{
+    float: left;
+    width: 470px;
+    margin-right: 10px;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result div h2
+{
+    margin: 0 0 2px 0;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result div h2 a, #wide-box-container .content-wrapper .results-wrapper div.result div h2 a:visited
+{
+    border-bottom: 1px solid #999999;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result div p
+{
+    color: #777777;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result div p, #wide-box-container .content-wrapper .results-wrapper div.result div a
+{
+    font-size: 12px;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result ul
+{
+    float: right;
+    width: 190px;
+    padding-top: 5px;
+    text-align: right;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result ul li
+{
+    color: #777777;
+    margin-bottom: 5px;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result ul li:last-child
+{
+    margin-bottom: 0px;
+}
+#wide-box-container .content-wrapper .results-wrapper div.result ul li, #wide-box-container .content-wrapper .results-wrapper div.result ul li a
+{
+    font-size: 11px;
+}
+#wide-box-container .content-wrapper .sidebar-wrapper
+{
+    float: right;
+    padding: 0px;
+    width: 230px;
+}
+#wide-box-container .content-wrapper .sidebar-wrapper .advertisement
+{
+    
+}
+
+
+#wide-box-container .footer
+{
+    padding: 0px 15px 18px 15px;
+    background-position: 0px bottom;
+    background-image: url(/statics/images/front-end/xplorium/wide-box/footer.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: block;
+    max-height: 75px;
+    min-height: 32px;
+    text-align: right;
+    overflow: hidden;
+}
+#wide-box-container .footer span
+{
+    float: left;
+    font-size: 11px;
+    padding-top: 7px;
+}
+#wide-box-container .footer span a
+{
+    background-position: left 6px;
+    background-image: url(/statics/images/front-end/xplorium/public/arrow.gif);
+    background-color: transparent;
+    border: 0 none;
+    color: #999999;
+    padding: 2px 0 2px 8px;
+    background-repeat: no-repeat;
+}

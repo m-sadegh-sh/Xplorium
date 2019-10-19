@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+        <%: " - Xplorium.NET" %></title>
+    <%= Html.StyleSheetBlock(new List<string>{{"xplorium/reset"},
+                                        {"xplorium/default"},
+                                        {"xplorium/libraries/default" },                                  
+                                        {"jquery/updnwatermark/default"}})%>
+    <%= Html.JavaScriptBlock(new List<string>{{"jquery/jquery-1.4.2" },
+                                           {"jquery/jquery.ui-1.8"},
+                                           {"xplorium/core"},
+                                           {"jquery/updnwatermark"}})%>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            Xplorium.Initialize();
+            Xplorium.NoneOutLineFor("a");
+            jQuery.updnWatermark.attachAll();
+            Xplorium.SetFocus();
+            Xplorium.GetAnimate();
+        });        
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <div class="page-container">
+        <div class="search-container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </div>
+</body>
+</html>

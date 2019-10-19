@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Database Name="Xplorium" Class="XploriumDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+    <Connection Mode="AppSettings"
+                ConnectionString="Data Source=NETGUYPC;Initial Catalog=&quot;Xplorium (Stable)&quot;;Integrated Security=True"
+                SettingsObjectName="Xplorium.Models.Properties.Settings" SettingsPropertyName="Xplorium__Stable_ConnectionString"
+                Provider="System.Data.SqlClient" />
+    <Table Name="dbo.Caches" Member="Caches">
+        <Type Name="Cache" Id="ID2">
+            <Column Name="CacheId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true"
+                    CanBeNull="false" />
+            <Column Name="CachedOn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+            <Column Name="Locked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+            <Column Name="Response" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+            <Column Name="Length" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+            <Association Name="Cache_ParsedContent" Member="ParsedContent" ThisKey="CacheId" OtherKey="ParsedContentId"
+                         Type="ParsedContent" Cardinality="One" />
+            <Association Name="Url_Cache" Member="Url" ThisKey="CacheId" OtherKey="UrlId" Type="Url" IsForeignKey="true" />
+        </Type>
+    </Table>
+    <Table Name="dbo.Words" Member="Words">
+        <Type Name="Word">
+            <Column Name="WordId" AutoSync="Never" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true"
+                    IsDbGenerated="true" CanBeNull="false" />
+            <Column Name="Text" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+            <Association Name="Word_Hit" Member="Hits" ThisKey="WordId" OtherKey="WordId" Type="Hit" />
+        </Type>
+    </Table>
+    <Table Name="dbo.Hits" Member="Hits">
+        <Type Name="Hit">
+            <Column Name="ParsedContentId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true"
+                    CanBeNull="false" />
+            <Column Name="WordId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+            <Column Name="Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+            <Association Name="Word_Hit" Member="Word" ThisKey="WordId" OtherKey="WordId" Type="Word" IsForeignKey="true" />
+            <Association Name="ParsedContent_Hit" Member="ParsedContent" ThisKey="ParsedContentId" OtherKey="ParsedContentId"
+                         Type="ParsedContent" IsForeignKey="true" />
+        </Type>
+    </Table>
+    <Table Name="dbo.Tracks" Member="Tracks">
+        <Type Name="Track">
+            <Column Name="TrackId" AutoSync="Never" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true"
+                    IsDbGenerated="true" CanBeNull="false" />
+            <Column Name="TrackedOn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+            <Column Name="Username" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+            <Column Name="RawQuery" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+            <Column Name="IpAddress" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+        </Type>
+    </Table>
+    <Table Name="dbo.Urls" Member="Urls">
+        <Type Name="Url" Id="ID1">
+            <Column Name="UrlId" AutoSync="Never" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true"
+                    IsDbGenerated="true" CanBeNull="false" />
+            <Column Name="FollowedOn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+            <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+            <Column Name="Locked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+            <Column Name="DetectedPath" Type="System.String" DbType="NVarChar(2048) NOT NULL" CanBeNull="false" />
+            <Column Name="ResolvedPath" Type="System.String" DbType="NVarChar(2048) NOT NULL" CanBeNull="false" />
+            <Column Name="Rate" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+            <Association Name="Url_Cache" Member="Cache" ThisKey="UrlId" OtherKey="CacheId" Type="Cache" Cardinality="One" />
+        </Type>
+    </Table>
+    <Table Name="dbo.ParsedContents" Member="ParsedContents">
+        <Type Name="ParsedContent">
+            <Column Name="ParsedContentId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true"
+                    CanBeNull="false" />
+            <Column Name="ParsedOn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+            <Column Name="Title" Type="System.String" DbType="NVarChar(72)" CanBeNull="true" />
+            <Column Name="Description" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+            <Column Name="Keywords" Type="System.String" DbType="NVarChar(180)" CanBeNull="true" />
+            <Column Name="CanBeIndexed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+            <Column Name="CanBeFollowed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+            <Association Name="ParsedContent_Hit" Member="Hits" ThisKey="ParsedContentId" OtherKey="ParsedContentId"
+                         Type="Hit" />
+            <Association Name="Cache_ParsedContent" Member="Cache" ThisKey="ParsedContentId" OtherKey="CacheId" Type="Cache"
+                         IsForeignKey="true" />
+        </Type>
+    </Table>
+    <Function Name="dbo.GetCacheableUrls" Method="GetCacheableUrls">
+        <Parameter Name="count" Type="System.Int32" DbType="Int" />
+        <ElementType IdRef="ID1" />
+    </Function>
+    <Function Name="dbo.UnlockLockedUrls" Method="UnlockLockedUrls">
+        <Return Type="System.Int32" />
+    </Function>
+    <Function Name="dbo.GetParsableCaches" Method="GetParsableCaches">
+        <Parameter Name="count" Type="System.Int32" DbType="Int" />
+        <ElementType IdRef="ID2" />
+    </Function>
+    <Function Name="dbo.UnlockLockedCaches" Method="UnlockLockedCaches">
+        <Return Type="System.Int32" />
+    </Function>
+</Database>

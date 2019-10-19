@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F47F71CD-E7BD-422E-BAAA-B2F65AA63D84}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xplorium</RootNamespace>
+    <AssemblyName>Xplorium</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Application\Controllers\LibrariesController.cs" />
+    <Compile Include="Areas\Application\Controllers\RedirectorController.cs" />
+    <Compile Include="Areas\Application\Controllers\StaticsController.cs" />
+    <Compile Include="Areas\Membership\Controllers\AuthenticateController.cs" />
+    <Compile Include="Areas\Search\Controllers\WebController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Application\Views\Error\NotFound.aspx" />
+    <Content Include="Areas\Membership\Views\Authenticate\AlreadyLoggedIn.aspx" />
+    <Content Include="Areas\Membership\Views\Authenticate\Basic.aspx" />
+    <Content Include="Areas\Membership\Views\Authenticate\LogIn.aspx" />
+    <Content Include="Areas\Membership\Views\Authenticate\LogOut.aspx" />
+    <Content Include="Areas\Search\Views\Web\Advanced.aspx" />
+    <Content Include="Areas\Search\Views\Web\Basic.aspx" />
+    <Content Include="Areas\Search\Views\Web\Not-Found.aspx" />
+    <Content Include="Areas\Search\Views\Web\Partials\Explore.ascx" />
+    <Content Include="Areas\Search\Views\Web\Partials\Result.ascx" />
+    <Content Include="Areas\Search\Views\Web\Partials\Results.ascx" />
+    <Content Include="Areas\Search\Views\Web\Result.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Box\Content.png" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Box\Footer.png" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Box\Header.png" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Public\Arrow.gif" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Public\Background.gif" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Advanced\Logo.png" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Advanced\Search.gif" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Basic\Logo.png" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Basic\Search.gif" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Result\Logo.png" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Result\Search.gif" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Wide-Box\Content.png" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Wide-Box\Footer.png" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Wide-Box\Header.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-anim_basic_16x16.gif" />
+    <Content Include="Statics\Images\jQuery\UI\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-icons_222222_256x240.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-icons_454545_256x240.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-icons_888888_256x240.png" />
+    <Content Include="Statics\Images\jQuery\UI\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Statics\Images\WMD-Editor\bg-fill.png" />
+    <Content Include="Statics\Images\WMD-Editor\bg.png" />
+    <Content Include="Statics\Images\WMD-Editor\blockquote.png" />
+    <Content Include="Statics\Images\WMD-Editor\bold.png" />
+    <Content Include="Statics\Images\WMD-Editor\code.png" />
+    <Content Include="Statics\Images\WMD-Editor\h1.png" />
+    <Content Include="Statics\Images\WMD-Editor\hr.png" />
+    <Content Include="Statics\Images\WMD-Editor\img.png" />
+    <Content Include="Statics\Images\WMD-Editor\italic.png" />
+    <Content Include="Statics\Images\WMD-Editor\link.png" />
+    <Content Include="Statics\Images\WMD-Editor\ol.png" />
+    <Content Include="Statics\Images\WMD-Editor\redo.png" />
+    <Content Include="Statics\Images\WMD-Editor\separator.png" />
+    <Content Include="Statics\Images\WMD-Editor\ul.png" />
+    <Content Include="Statics\Images\WMD-Editor\undo.png" />
+    <Content Include="Statics\Images\WMD-Editor\wmd-on.png" />
+    <Content Include="Statics\Images\WMD-Editor\wmd.png" />
+    <Content Include="Statics\Images\Xplorium\Activity-Indicator.gif" />
+    <Content Include="Statics\Images\Xplorium\Bar.gif" />
+    <Content Include="Statics\Images\Xplorium\Bar.png" />
+    <Content Include="Statics\Images\Xplorium\Explore-Background.gif" />
+    <Content Include="Statics\Images\Xplorium\Horizontal-Line-Break.gif" />
+    <Content Include="Statics\Images\Xplorium\Search\Button.png" />
+    <Content Include="Statics\Images\Xplorium\Search\Web\Advanced.png" />
+    <Content Include="Statics\Images\Xplorium\Search\Web\Basic.png" />
+    <Content Include="Statics\Images\Xplorium\Search\Web\Result.png" />
+    <Content Include="Statics\Images\Xplorium\Text-Box-Background.gif" />
+    <Content Include="Statics\Images\Xplorium\Vertical-Line-Break-Orange.gif" />
+    <Content Include="Statics\Images\Xplorium\Vertical-Line-Break.gif" />
+    <Content Include="Statics\Plug-Ins\Xplorium-Search-Engine.xml" />
+    <Content Include="Statics\Scripts\jQuery\jquery-1.4.2.js" />
+    <Content Include="Statics\Scripts\jQuery\jquery.highlightFade.js" />
+    <Content Include="Statics\Scripts\jQuery\jquery.ui-1.8.js" />
+    <Content Include="Statics\Scripts\jQuery\jquery.validate.js" />
+    <Content Include="Statics\Scripts\jQuery\jquery.watermarkinput.js" />
+    <Content Include="Statics\Scripts\wymeditor\jquery\GPL-LICENSE.txt" />
+    <Content Include="Statics\Scripts\wymeditor\jquery\jquery.js" />
+    <Content Include="Statics\Scripts\wymeditor\jquery\jquery.ui.draggable.js" />
+    <Content Include="Statics\Scripts\wymeditor\jquery\jquery.ui.js" />
+    <Content Include="Statics\Scripts\wymeditor\jquery\jquery.ui.resizable.js" />
+    <Content Include="Statics\Scripts\wymeditor\jquery\jquery.ui.sortable.js" />
+    <Content Include="Statics\Scripts\wymeditor\jquery\MIT-LICENSE.txt" />
+    <Content Include="Statics\Scripts\wymeditor\README.txt" />
+    <Content Include="Statics\Scripts\wymeditor\styles.css" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\iframe\default\wymiframe.css" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\jquery.wymeditor.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\jquery.wymeditor.min.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\jquery.wymeditor.pack.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\lang\en.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\lang\fa.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\plugins\embed\jquery.wymeditor.embed.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\plugins\fullscreen\icon_fullscreen.gif" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\plugins\fullscreen\jquery.wymeditor.fullscreen.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\plugins\hovertools\jquery.wymeditor.hovertools.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\plugins\resizable\jquery.wymeditor.resizable.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\plugins\tidy\jquery.wymeditor.tidy.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\compact\icons.png" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\compact\skin.css" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\compact\skin.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\default\icons.png" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\default\skin.css" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\default\skin.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\minimal\images\bg.header.gif" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\minimal\images\bg.selector.silver.gif" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\minimal\images\bg.wymeditor.png" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\minimal\images\icons.silver.gif" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\minimal\skin.css" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\minimal\skin.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\silver\images\bg.header.gif" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\silver\images\bg.selector.silver.gif" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\silver\images\bg.wymeditor.png" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\silver\images\icons.silver.gif" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\silver\skin.css" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\silver\skin.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\twopanels\icons.png" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\twopanels\skin.css" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\twopanels\skin.js" />
+    <Content Include="Statics\Scripts\wymeditor\wymeditor\skins\wymeditor_icon.png" />
+    <Content Include="Statics\Scripts\Xplorium\Core.js" />
+    <Content Include="Statics\Scripts\Xplorium\jQuery\Search\Advanced\Default.js" />
+    <Content Include="Statics\Scripts\Xplorium\jQuery\Search\Basic\Default.js" />
+    <Content Include="Statics\Scripts\Xplorium\jQuery\Search\Not-Found\Default.js" />
+    <Content Include="Statics\Scripts\Xplorium\jQuery\Search\Result\Default.js" />
+    <Content Include="Statics\Scripts\Xplorium\Search-Web-Basic.js" />
+    <Content Include="Statics\Styles\Front-End\Xplorium\Box\Default.css" />
+    <Content Include="Statics\Styles\Front-End\Xplorium\Data-Pager\Default.css" />
+    <Content Include="Statics\Styles\Front-End\Xplorium\Membership\Default.css" />
+    <Content Include="Statics\Styles\Front-End\Xplorium\Public\Default.css" />
+    <Content Include="Statics\Styles\Front-End\Xplorium\Search\Web\Advanced\Default.css" />
+    <Content Include="Statics\Styles\Front-End\Xplorium\Search\Web\Basic\Default.css" />
+    <Content Include="Statics\Styles\Front-End\Xplorium\Search\Web\Not-Found\Default.css" />
+    <Content Include="Statics\Styles\Front-End\Xplorium\Search\Web\Result\Default.css" />
+    <Content Include="Statics\Styles\Front-End\Xplorium\Wide-Box\Default.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.accordion.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.all.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.base.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.button.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.core.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.datepicker.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.dialog.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.progressbar.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.resizable.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.slider.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.tabs.css" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.theme.css" />
+    <Content Include="Statics\Styles\Xplorium\Default.css" />
+    <Content Include="Statics\Styles\Xplorium\Message-Box.css" />
+    <Content Include="Statics\Styles\Xplorium\Messages\Default.css" />
+    <Content Include="Statics\Styles\Xplorium\Reset.css" />
+    <Content Include="Statics\Styles\Xplorium\Search-Web-Advanced.css" />
+    <Content Include="Statics\Styles\Xplorium\Search-Web-Result.css" />
+    <Content Include="Statics\Styles\Xplorium\Search-Web.css" />
+    <Content Include="Statics\Styles\Xplorium\Search\Zone\Default-Aside-Panel.css" />
+    <Content Include="Statics\Styles\Xplorium\Search\Zone\Default.css" />
+    <Content Include="Views\Home\Default.aspx" />
+    <Content Include="Views\Shared\DisplayTemplate\Boolean.ascx" />
+    <Content Include="Views\Shared\DisplayTemplate\Decimal.ascx" />
+    <Content Include="Views\Shared\DisplayTemplate\EmailAddress.ascx" />
+    <Content Include="Views\Shared\DisplayTemplate\HiddenInput.ascx" />
+    <Content Include="Views\Shared\DisplayTemplate\Html.ascx" />
+    <Content Include="Views\Shared\DisplayTemplate\Object.ascx" />
+    <Content Include="Views\Shared\DisplayTemplate\String.ascx" />
+    <Content Include="Views\Shared\DisplayTemplate\Url.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\Boolean.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\Decimal.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\HiddenInput.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\MultilineText.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\Object.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\Password.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\String.ascx" />
+    <Content Include="Views\Shared\Footer.ascx" />
+    <Content Include="Views\Shared\Header.ascx" />
+    <Content Include="Views\Shared\Loading.ascx" />
+    <Content Include="Views\Shared\Message.ascx" />
+    <Content Include="Views\Shared\Nav.ascx" />
+    <Content Include="Views\Shared\Not-Found.aspx" />
+    <Content Include="Views\Shared\Pager.ascx" />
+    <Content Include="Views\Shared\SearchTypeSelector.ascx" />
+    <Content Include="Views\Shared\Zone.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Search\Views\Shared\Partials\" />
+    <Folder Include="Statics\HTML\" />
+    <Folder Include="Views\Shared\DataPager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Application\Views\Error\Default.master" />
+    <Content Include="Areas\Application\Views\Shared\Default.Master" />
+    <Content Include="Areas\Application\Views\Web.config" />
+    <Content Include="Areas\Membership\Views\Authenticate\Controller.master" />
+    <Content Include="Areas\Membership\Views\Shared\Area.master" />
+    <Content Include="Areas\Membership\Views\Web.config" />
+    <Content Include="Areas\Search\Views\Shared\Search.master" />
+    <Content Include="Areas\Search\Views\Web.config" />
+    <Content Include="Areas\Search\Views\Web\Web.master" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Button.psd" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Icon.psd" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Logo.psd" />
+    <Content Include="Statics\Images\Front-End\Xplorium\Search\Web\Search.psd" />
+    <Content Include="Statics\Scripts\Web.config" />
+    <Content Include="Statics\Scripts\wymeditor\jquery\README" />
+    <Content Include="Statics\Styles\jQuery\UI\Base\jquery.ui.autocomplete.css_" />
+    <Content Include="Statics\Styles\Web.config" />
+    <Content Include="Views\Shared\Xplorium.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xplorium.Common\Xplorium.Common.csproj">
+      <Project>{3c81dc45-7f7e-4058-8b09-2b911556ca7c}</Project>
+      <Name>Xplorium.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xplorium.Core\Xplorium.Core.csproj">
+      <Project>{46bd2f32-0b8b-4543-8b70-574a8eb900a3}</Project>
+      <Name>Xplorium.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xplorium.Model\Xplorium.Models.csproj">
+      <Project>{463f8e94-5144-477e-977e-3aeb37a1cd2d}</Project>
+      <Name>Xplorium.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xplorium.Repository\Xplorium.Repositories.csproj">
+      <Project>{1148dc31-c7fb-4101-8029-725d6ce2a694}</Project>
+      <Name>Xplorium.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xplorium.Web\Xplorium.Web.csproj">
+      <Project>{8a088264-249b-4a72-82e3-203698e4c475}</Project>
+      <Name>Xplorium.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xplorium.WSE\Xplorium.WSE.csproj">
+      <Project>{7d81affc-4b8d-43d2-b47c-8279e57bf596}</Project>
+      <Name>Xplorium.WSE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:36697/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

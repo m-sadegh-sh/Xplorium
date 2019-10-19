@@ -1,0 +1,77 @@
+﻿<Window x:Class="Xplorium.WpfSpider.SpiderWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:UCPL="clr-namespace:Xplorium.WpfSpider"
+        Title="Xplorium.NET Spider" WindowStartupLocation="CenterOwner" Closing="SpiderWindow_Closing"
+        Loaded="SpiderWindow_Loaded" MinHeight="350" MinWidth="500" ResizeMode="CanResizeWithGrip" Closed="SpiderWindow_Closed"
+        mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="350" Width="700">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\Xplorium.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo ProgressState="None" />
+    </Window.TaskbarItemInfo>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <UCPL:PenddingLayout x:Name="pl" Grid.Row="0" />
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Margin="10" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Xplorium.NET Spider" Foreground="RoyalBlue" FontSize="16"
+                           Padding="0,0,0,5" OverridesDefaultStyle="False" FontWeight="Normal" />
+                <TextBlock Grid.Row="1" Text="Current task" Name="tbCurrentTask" Padding="0" />
+                <StackPanel Grid.Row="2" Margin="0,3,0,0" Name="spSubSection">
+                    <ProgressBar Name="pbSubSectionProgress" Height="15" />
+                    <TextBlock Text="00.00%" HorizontalAlignment="Center" Margin="0,-16,0,0"
+                               Name="tbSubSectionProgress" Padding="0" Foreground="Gray" />
+                </StackPanel>
+                <StackPanel Grid.Row="3" Margin="0,5,0,0" Name="spOverall">
+                    <ProgressBar Name="pbOverallProgress" Height="15">
+                    </ProgressBar>
+                    <TextBlock Text="00.00%" HorizontalAlignment="Center" Margin="0,-16,0,0" Name="tbOverallProgress"
+                               Padding="0" Foreground="Gray" />
+                </StackPanel>
+                <Border Grid.Row="4" BorderBrush="Gainsboro" BorderThickness="1" Margin="0,7,0,0">
+                    <ScrollViewer Name="svLogs" Padding="5" HorizontalScrollBarVisibility="Auto"
+                                  VerticalScrollBarVisibility="Auto">
+                        <ItemsControl Name="icLogs" IsTabStop="False" Focusable="False" />
+                    </ScrollViewer>
+                </Border>
+                <CheckBox Grid.Row="5" HorizontalAlignment="Left" Name="chbAutoScrollLogger" IsChecked="True"
+                          Margin="0,5,0,0" Content="_Follow to logger" />
+            </Grid>
+            <Border Grid.Row="1" BorderThickness="0,1,0,0" BorderBrush="Gainsboro" />
+            <Grid Grid.Row="2" Background="WhiteSmoke">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Content="To _background" Name="btnToBackground" Click="BtnToBackgroundClick" />
+                <Button Grid.Column="3" Content="Start/Cancel" Name="btnStartCancel" Click="BtnStartCancelClick"
+                        IsDefault="True" IsCancel="True" />
+                <Button Grid.Column="4" Content="_Close" Name="btnClose" Click="BtnCloseClick" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿div#data-pager-container
+{
+    margin: 20px;
+    display: block;
+    text-align: center;
+}
+div#data-pager-container a
+{
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    padding: 4px 9px 4px 9px;
+    margin-right: 5px;
+}
+div#data-pager-container a:last
+{
+    margin-right: 0px;
+}
+div#data-pager-container a:hover
+{
+    border-color: #004BD8;
+}
+div#data-pager-container a.data-pager-back
+{
+    background-color: #FF0066;
+}
+div#data-pager-container a.data-pager-previous-batch
+{
+    background-color: #FF9933;
+}
+div#data-pager-container a.data-pager-pages
+{
+    background-color: #00FF00;
+}
+div#data-pager-container a.data-pager-current
+{
+    background-color: #008080;
+}
+div#data-pager-container a.data-pager-next-batch
+{
+    background-color: #99CC00;
+}
+div#data-pager-container a:data-pager-next
+{
+    background-color: #66FFFF;
+}

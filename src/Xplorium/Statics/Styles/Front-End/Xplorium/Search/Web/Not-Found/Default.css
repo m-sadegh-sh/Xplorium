@@ -1,0 +1,22 @@
+﻿#box-container
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#box-container .header h2
+{
+    background-image: url(/statics/images/front-end/xplorium/search/web/basic/logo.png);
+}
+#box-container form .footer input[type="submit"]
+{
+    background-image: url(/statics/images/front-end/xplorium/search/web/basic/search.gif);
+    width: 86px;
+    height: 32px;    
+}
+#box-container form .footer input[type="submit"]:focus
+{
+}
+.autocomplete
+{
+    width: 504px;
+}

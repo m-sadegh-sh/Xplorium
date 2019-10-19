@@ -1,0 +1,10 @@
+﻿<OpenSearchDescription>
+<ShortName>Xplorim.NET Search</ShortName>
+−
+<Description>
+Search Web, Images, Videos, News and Blogs
+</Description>
+<InputEncoding>UTF-8</InputEncoding>
+<Image width="16" height="16" type="image/x-icon">http://www.xplorium.net/statics/images/xplorium/favicon.ico</Image>
+<Url type="text/html" method="get" template="http://www.xplorium.net/en-gb/zune/search-engine/web/result?query={searchTerms}"/>
+</OpenSearchDescription>

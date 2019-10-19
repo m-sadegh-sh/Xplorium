@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+        <%: Xplorium.Web.Preferences.Application.Name %></title>
+    <%--<%= Html.StyleSheetBlock("xplorium/reset") %>--%>
+    <%= Html.StyleSheetBlock("xplorium/default") %>
+    <%= Html.StyleSheetBlock("jquery/ui/base/jquery.ui.all") %>
+    <asp:ContentPlaceHolder ID="CssContent" runat="server" />
+</head>
+<body class="xplorium">
+    <div class="wrapper">
+        <% Html.RenderPartial("Header"); %>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <%= Html.JavaScriptBlock("jquery/jquery-1.4.2") %>
+        <%= Html.JavaScriptBlock("jquery/jquery.ui-1.8")%>
+        <%= Html.JavaScriptBlock("jquery/jquery.watermarkinput")%>
+        <%= Html.JavaScriptBlock("xplorium/core") %>
+        <asp:ContentPlaceHolder ID="ScriptsContent" runat="server" />
+        <script type="text/javascript">
+            $(document).ready(function () {
+                Xplorium.Initialize();
+            });
+        </script>
+    </div>
+    <% Html.RenderPartial("Footer"); %>
+</body>
+</html>

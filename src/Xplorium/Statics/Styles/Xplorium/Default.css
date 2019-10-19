@@ -1,0 +1,375 @@
+﻿*
+{
+    font-family: Calibri;
+    font-size: 12px;
+    color: #333333;
+    border-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+html, body.xplorium
+{
+    height: 100%;
+}
+body.xplorium
+{
+    background-color: #e4e4e4;
+    min-height: 500px;
+    min-width: 800px;
+}
+span.activity-indicator
+{
+    display: none;
+    background: url(/statics/images/xplorium/activity-indicator.gif) no-repeat left 10px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 10px;
+    visibility: hidden;
+}
+span.inline-activity-indicator
+{
+    margin: 4px 10px -4px -27px;
+    display: inline-block;
+    background: url(/statics/images/xplorium/activity-indicator.gif) no-repeat center center;
+    font-weight: bold;
+    font-size: 14px;
+    width: 16px;
+    height: 16px;
+    visibility: hidden;
+}
+body.xplorium div.wrapper
+{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -72px;
+    position: relative;
+}
+body.xplorium div.wrapper div.area
+{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.center
+{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+p
+{
+    text-indent: 10px;
+    line-height: 15px;
+}
+.block
+{
+    display: block !important;
+}
+.none
+{
+    display: none !important;
+}
+a
+{
+    text-decoration: none;
+    color: #004bd8;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+*:focus
+{
+    outline: 0;
+}
+ul
+{
+    margin: 10px;
+    display: block;
+}
+li
+{
+    display: block;
+    list-style-type: square;
+}
+strong
+{
+    font-weight: bold;
+    display: inline !important;
+    color: inherit;
+    font-size: inherit;
+}
+div.clear-fix
+{
+    clear: both !important;
+    width: 100% !important;
+    height: 0 !important;
+    display: block !important;
+}
+div.absolute-position
+{
+    position: absolute;
+}
+
+div.header
+{
+    margin-bottom: 20px;
+    opacity: 0;
+    text-align: center;
+    display: block;
+    clear: both;
+    min-height: 100%;
+}
+
+div.footer
+{
+    margin-top: 25px;
+    opacity: 0;
+    text-align: center;
+    height: 14px;
+    display: block;
+    position: relative;
+    background-color: #DADADA;
+    background-position: top;
+    background-color: #DADADA;
+    padding: 18px 15px 15px 15px;
+    background-image: url(/statics/images/xplorium/horizontal-line-break.gif);
+    background-repeat: repeat-x;
+}
+div.push
+{
+    margin-top: 25px;
+    height: 47px;
+}
+
+div.footer div.quicks
+{
+    display: block;
+}
+
+div.footer div.quicks a
+{
+    background-position: right;
+    color: #0088cc;
+    padding-right: 13px;
+    margin-right: 10px;
+    background-image: url(/statics/images/xplorium/vertical-line-break.gif);
+    background-repeat: repeat-y;
+}
+
+div.footer div.quicks a:last-child
+{
+    padding-right: 0px;
+    margin-right: 0px;
+    background-image: none;
+}
+div.footer div.right
+{
+    float: right;
+}
+div.footer div.left
+{
+    float: left;
+}
+
+div.quicks
+{
+    display: block;
+}
+
+div.quicks div.quicks-content
+{
+    background-position: bottom;
+}
+
+div.quicks div.quicks-content div.left, div.quicks div.quicks-content div.right
+{
+    background-image: url(/statics/images/xplorium/bar.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+div.quicks div.quicks-content div.left
+{
+    background-position: right center;
+    float: left;
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+div.quicks div.quicks-content div.right
+{
+    background-position: left center;
+    float: right;
+    padding-right: 10px;
+    padding-left: 15px;
+}
+div.quicks div.quicks-content div.left a, div.quicks div.quicks-content div.left span, div.quicks div.quicks-content div.right a, div.quicks div.quicks-content div.right span
+{
+    background-position: right;
+    padding-right: 13px;
+    margin-right: 10px;
+    background-image: url(/statics/images/xplorium/vertical-line-break-orange.gif);
+    background-repeat: repeat-y;
+    font-weight: bold;
+    color: #F3F3F3;
+    text-shadow: 1px 1px 1px #883d13;
+}
+
+div.quicks div.quicks-content div.left span, div.quicks div.quicks-content div.right span
+{
+    display: inline-block;
+    padding-right: 0px;
+    background-image: none;
+    margin-right: 10px;
+}
+
+div.quicks div.quicks-content div.left a:last-child, div.quicks div.quicks-content div.right a:last-child
+{
+    padding-right: 0px;
+    margin-right: 0px;
+    background-image: none;
+}
+
+
+
+.vertical-line-break
+{
+    background-image: url(/statics/images/xplorium/vertical-line-break.gif);
+    background-repeat: repeat-y;
+}
+
+input[type="text"]
+{
+    border: 1px solid #CFCFCF;
+    padding: 4px;
+    font-size: 14px;
+    height: 24px;
+    font-weight: bold;
+    color: #444;
+    background-image: url(/statics/images/xplorium/text-box-background.gif);
+    background-repeat: no-repeat;
+}
+
+button
+{
+    overflow: hidden;
+    text-indent: -9999px;
+    background-color: transparent;
+}
+
+div.explore
+{
+    padding: 10px;
+    display: block;
+    background: url(/statics/images/xplorium/explore-background.gif) left top no-repeat, url(/statics/images/xplorium/explore-background.gif) right bottom no-repeat, url(/statics/images/xplorium/explore-background.gif) center repeat-y;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 880px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+div.explore:last-child
+{
+    margin-bottom: 0px;
+}
+div.explore h1
+{
+    background-position: right top;
+    padding: 5px 10px 5px 30px;
+    background-image: url(/statics/images/xplorium/bar.png);
+    text-align: left;
+    color: #fff;
+    text-shadow: 1px 1px 1px #883d13;
+    font-size: 14px;
+    margin-left: -9px;
+    font-weight: bold;
+    clear: both;
+    float: left;
+    background-repeat: repeat-x;
+    overflow: hidden;
+    height: 17px;
+    margin-bottom: 10px;
+}
+div.explore .sections
+{
+    display: block;
+    margin-bottom: 10px;
+}
+div.explore .sections:last-child
+{
+    margin-bottom: 0px;
+}
+div.explore .section
+{
+    width: 880px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+div.explore .section:last-child
+{
+    margin-bottom: 0px;
+}
+
+div.explore.two-column .section
+{
+    width: 425px;
+}
+div.explore.three-column .section
+{
+    width: 280px;
+}
+div.explore.four-column .section
+{
+    width: 210px;
+}
+
+div.explore .section h2, div.explore .section p,div.explore .section ul, div.explore .section a
+{
+    text-align: left !important;
+    float: left;
+    clear: both;
+}
+div.explore .section h2
+{
+    margin-bottom: 5px;
+}
+div.explore .section h2 *
+{
+    font-size: 14px;
+}
+div.explore .section h2 span
+{
+    display: inline-block;
+    font-size: 12px;
+    color: #808080;
+    font-weight: normal;
+}
+div.explore .section h2 a
+{
+    
+}
+div.explore .section p
+{
+    
+}
+div.explore .section ul
+{
+    
+}
+div.explore .section a
+{
+    
+}

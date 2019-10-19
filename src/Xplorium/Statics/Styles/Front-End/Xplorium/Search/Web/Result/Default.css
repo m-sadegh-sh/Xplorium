@@ -1,0 +1,22 @@
+﻿#wide-box-container
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#wide-box-container .header h2
+{
+    background-image: url(/statics/images/front-end/xplorium/search/web/result/logo.png);
+}
+#wide-box-container form .footer input[type="submit"]
+{
+    background-image: url(/statics/images/front-end/xplorium/search/web/result/search.gif);
+    width: 86px;
+    height: 32px;
+}
+#wide-box-container form .footer input[type="submit"]:focus
+{
+}
+.autocomplete
+{
+    width: 504px;
+}

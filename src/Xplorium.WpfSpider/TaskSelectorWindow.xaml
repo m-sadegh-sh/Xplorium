@@ -1,0 +1,38 @@
+﻿<Window x:Class="Xplorium.WpfSpider.TaskSelectorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Xplorium.NET Spider Manager"
+        WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" Closing="TaskSelectorWindow_Closing"
+        Loaded="TaskSelectorWindow_Loaded" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\Xplorium.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <StackPanel>
+        <TextBlock Margin="10,10,10,0" Text="Xplorium.NET Spider Manager" Foreground="RoyalBlue" FontSize="16" />
+        <GroupBox Margin="10,10,10,0" Header="Xplorium.NET Cacher">
+            <StackPanel Margin="10">
+                <TextBlock Text="Start caching contents by running Xplorium.NET Cacher" />
+                <Button Margin="0,10,0,0" HorizontalAlignment="Right" Content="Run" Padding="20,1" Name="btnCacher"
+                        Click="btnCacher_Click" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Margin="10" Header="Xplorium.NET Spider">
+            <StackPanel Margin="10">
+                <TextBlock Text="Start spidering cached contents by running Xplorium.NET Spider" />
+                <Button Margin="0,10,0,0" HorizontalAlignment="Right" Content="Run" Padding="20,1" Name="btnSpider"
+                        Click="btnSpider_Click" />
+            </StackPanel>
+        </GroupBox>
+        <Border BorderThickness="0,1,0,0" BorderBrush="Gainsboro" />
+        <Grid Background="WhiteSmoke">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Content="Close" Name="btnClose" Click="btnClose_Click" />
+        </Grid>
+    </StackPanel>
+</Window>
